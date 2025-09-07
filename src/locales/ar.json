@@ -1,0 +1,24 @@
+{
+  "title": "صانع السيرة الذاتية",
+  "summary": {
+    "title": "الملخص المهني"
+  },
+  "education": {
+    "title": "التعليم"
+  },
+  "certifications": {
+    "title": "الشهادات"
+  },
+  "experience": {
+    "title": "الخبرات العملية"
+  },
+  "skills": {
+    "title": "المهارات"
+  },
+  "projects": {
+    "title": "المشاريع"
+  },
+  "languages": {
+    "title": "اللغات"
+  }
+}

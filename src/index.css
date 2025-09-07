@@ -43,3 +43,28 @@
   height: calc(100vh - 58px);
   /* width: auto; */
 }
+
+/* Summary */
+.summary {
+  color: var(--secondary-color);
+}
+
+.summary textarea {
+  background-color: var(--background-color);
+  resize: none;
+}
+
+/* Components */
+.btn-link {
+  text-decoration: none;
+  color: var(--background-color);
+  background-color: var(--primary-color);
+  border-radius: 5px;
+  padding: 5px 10px;
+  transition: 0.3s;
+}
+
+.btn-link:hover {
+  padding: 10px 15px;
+  color: var(--background-color);
+}

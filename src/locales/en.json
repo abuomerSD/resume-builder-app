@@ -1,0 +1,24 @@
+{
+  "title": "Resume Builder",
+  "summary": {
+    "title": "Summary"
+  },
+  "education": {
+    "title": "Education"
+  },
+  "certifications": {
+    "title": "Certifications"
+  },
+  "experience": {
+    "title": "Experience"
+  },
+  "skills": {
+    "title": "Skills"
+  },
+  "projects": {
+    "title": "Projects"
+  },
+  "languages": {
+    "title": "Languauges"
+  }
+}
