@@ -18,12 +18,17 @@ function NavBar() {
       <Container>
         <Navbar.Brand href="#home">
           <Link to={"/"} className="link">
-            {t("title")}
+            <img src="logo.svg" alt="logo" className="logo" />
           </Link>
         </Navbar.Brand>
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
         <Navbar.Collapse id="basic-navbar-nav">
           <Nav className="me-auto">
+            <Nav.Link>
+              <Link to={"/personal-info"} className="link">
+                {t("info.title")}
+              </Link>
+            </Nav.Link>
             <Nav.Link>
               <Link to={"/summary"} className="link">
                 {t("summary.title")}

@@ -7,8 +7,14 @@ import Skills from "../components/Skills";
 import Projects from "../components/Projects";
 import Languages from "../components/Languages";
 import App from "../App";
+import PersonalInfo from "../components/PersonalInfo";
+import NotFoundPage from "../pages/NotFound";
 
 const routes: RouteObject[] = [
+  {
+    path: "/personal-info",
+    element: <PersonalInfo />,
+  },
   {
     path: "/summary",
     element: <Summary />,
@@ -36,6 +42,10 @@ const routes: RouteObject[] = [
   {
     path: "/languages",
     element: <Languages />,
+  },
+  {
+    path: "*",
+    element: <NotFoundPage />,
   },
 ];
 

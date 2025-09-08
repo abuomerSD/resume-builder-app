@@ -4,7 +4,11 @@
     "title": "Summary"
   },
   "education": {
-    "title": "Education"
+    "title": "Education",
+    "school": "School",
+    "year": "Year",
+    "degree": "Degree",
+    "add": "Add"
   },
   "certifications": {
     "title": "Certifications"
@@ -20,5 +24,14 @@
   },
   "languages": {
     "title": "Languauges"
+  },
+  "info": {
+    "title": "Personal Info",
+    "location": "Location",
+    "phone": "Phone",
+    "email": "Email",
+    "linkedin": "Linkedin",
+    "github": "Github",
+    "personalWebsite": "Personal Website"
   }
 }
