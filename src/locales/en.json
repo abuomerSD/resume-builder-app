@@ -11,10 +11,19 @@
     "add": "Add"
   },
   "certifications": {
-    "title": "Certifications"
+    "title": "Certifications",
+    "school": "School",
+    "year": "Year",
+    "link": "Link",
+    "add": "Add"
   },
   "experience": {
-    "title": "Experience"
+    "title": "Experience",
+    "companyName": "Company Name",
+    "location": "Location",
+    "jobTitle": "Job Title",
+    "fromDate": "From",
+    "toDate": "To"
   },
   "skills": {
     "title": "Skills"
@@ -32,6 +41,8 @@
     "email": "Email",
     "linkedin": "Linkedin",
     "github": "Github",
-    "personalWebsite": "Personal Website"
+    "personalWebsite": "Personal Website",
+    "jobTitle": "Job Title",
+    "name": "Name"
   }
 }

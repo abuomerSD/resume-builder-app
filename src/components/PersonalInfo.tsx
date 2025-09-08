@@ -14,6 +14,22 @@ const PersonalInfo = () => {
           <TextField
             className="m-1"
             id="outlined-required"
+            label={t("info.name")}
+          />
+        </Col>
+        <Col xs={12} md={6}>
+          <TextField
+            className="m-1"
+            id="outlined-required"
+            label={t("info.jobTitle")}
+          />
+        </Col>
+      </Row>
+      <Row>
+        <Col xs={12} md={6}>
+          <TextField
+            className="m-1"
+            id="outlined-required"
             label={t("info.location")}
           />
         </Col>

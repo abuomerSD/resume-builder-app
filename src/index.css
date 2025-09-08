@@ -77,6 +77,7 @@
   color: var(--background-color);
   background-color: var(--secondary-color);
   padding: 5px 10px;
+  transition: 0.3s;
 }
 
 .btn-second:hover {

@@ -4,8 +4,8 @@ const Skills = () => {
   const { t } = useTranslation();
 
   return (
-    <div>
-      <h5>{t("skills.title")}</h5>
+    <div className="d-flex flex-column align-items-center gap-2">
+      <h5 className="mt-2">{t("skills.title")}</h5>
     </div>
   );
 };
