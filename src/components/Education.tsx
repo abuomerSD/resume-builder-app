@@ -7,8 +7,8 @@ const Experience = () => {
   const { t } = useTranslation();
 
   return (
-    <div className="d-flex flex-column align-items-center">
-      <h5 className="mt-2">{t("education.title")}</h5>
+    <div className="d-flex flex-column align-items-center p-3">
+      <h5>{t("education.title")}</h5>
       <Row className="m-2">
         <Col xs={12} md={6} className="mt-2 ml-2">
           <TextField label={t("education.school")} />

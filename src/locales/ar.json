@@ -26,13 +26,22 @@
     "toDate": "الى"
   },
   "skills": {
-    "title": "المهارات"
+    "title": "المهارات",
+    "skillCategory": "تصنيف المهارة",
+    "description": "وصف المهارة",
+    "add": "إضافة"
   },
   "projects": {
-    "title": "المشاريع"
+    "title": "المشاريع",
+    "projectName": "اسم المشروع",
+    "description": "وصف المشروع",
+    "add": "إضافة"
   },
   "languages": {
-    "title": "اللغات"
+    "title": "اللغات",
+    "languageName": "اسم اللغة",
+    "languageLevel": "مستوى اللغة",
+    "add": "اضافة"
   },
   "info": {
     "title": "المعلومات الشخصية",

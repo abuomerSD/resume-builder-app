@@ -32,7 +32,8 @@
 
 .resume-data-forms {
   background-color: var(--background-color);
-  border: 1px solid green;
+  border: 1px solid gray;
+  border-radius: 10px;
   height: calc(100vh - 58px);
   /* width: auto; */
 }
@@ -40,6 +41,7 @@
 .resume-preview {
   background-color: var(--background-color);
   border: 1px solid gray;
+  border-radius: 10px;
   height: calc(100vh - 58px);
   /* width: auto; */
 }

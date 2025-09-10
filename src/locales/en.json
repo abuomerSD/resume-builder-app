@@ -26,13 +26,22 @@
     "toDate": "To"
   },
   "skills": {
-    "title": "Skills"
+    "title": "Skills",
+    "skillCategory": "Skill Category",
+    "description": "Skill Description",
+    "add": "Add"
   },
   "projects": {
-    "title": "Projects"
+    "title": "Projects",
+    "projectName": "Project Name",
+    "description": "Project Description",
+    "add": "Add"
   },
   "languages": {
-    "title": "Languauges"
+    "title": "Languauges",
+    "languageName": "Language Name",
+    "languageLevel": "Language Level",
+    "add": "Add"
   },
   "info": {
     "title": "Personal Info",

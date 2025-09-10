@@ -7,8 +7,8 @@ const PersonalInfo = () => {
   const { t } = useTranslation();
 
   return (
-    <div className="d-flex flex-column align-items-center gap-2">
-      <h5 className="mt-2">{t("info.title")}</h5>
+    <div className="d-flex flex-column align-items-center gap-2 p-3">
+      <h5>{t("info.title")}</h5>
       <Row>
         <Col xs={12} md={6}>
           <TextField
