@@ -10,6 +10,7 @@ const Projects = () => {
     <div className="d-flex flex-column justify-content-center align-items-center gap-2 p-3">
       <h5>{t("projects.title")}</h5>
       <TextField label={t("projects.projectName")} className="form-control" />
+      <TextField label={t("projects.projectLink")} className="form-control" />
       <textarea
         className="skill form-control m-2"
         placeholder={t("projects.description")}

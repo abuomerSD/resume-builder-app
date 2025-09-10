@@ -43,7 +43,11 @@
   border: 1px solid gray;
   border-radius: 10px;
   height: calc(100vh - 58px);
-  /* width: auto; */
+  display: flex;
+  flex-direction: column;
+  /* justify-content: center; */
+  align-items: center;
+  padding: 20px;
 }
 
 /* Summary */
@@ -86,4 +90,12 @@
   padding: 10px 15px;
   color: var(--background-color);
   background-color: var(--secondary-color);
+}
+
+/* Template */
+
+.template {
+  border: 1px solid gray;
+  height: 100%;
+  width: 100%;
 }

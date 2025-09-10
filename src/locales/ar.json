@@ -35,7 +35,8 @@
     "title": "المشاريع",
     "projectName": "اسم المشروع",
     "description": "وصف المشروع",
-    "add": "إضافة"
+    "add": "إضافة",
+    "projectLink": "رابط المشروع"
   },
   "languages": {
     "title": "اللغات",
@@ -53,5 +54,9 @@
     "personalWebsite": "الموقع الشخصي",
     "name": "الاسم",
     "jobTitle": "اسم الوظيفة"
+  },
+  "templates": {
+    "1": "قالب 1",
+    "2": "قالب 2"
   }
 }

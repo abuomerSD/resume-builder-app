@@ -4,9 +4,12 @@ import "./index.css";
 import { RouterProvider } from "react-router-dom";
 import router from "./router/index.tsx";
 import "./i18n.ts";
+import { ResumeDataProvider } from "./context/ResumeDataProvider.tsx";
 
 createRoot(document.getElementById("root")!).render(
   <StrictMode>
-    <RouterProvider router={router} />
+    <ResumeDataProvider>
+      <RouterProvider router={router} />
+    </ResumeDataProvider>
   </StrictMode>
 );
