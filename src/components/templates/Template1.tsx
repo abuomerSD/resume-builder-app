@@ -1,10 +1,18 @@
 import { useResumeData } from "../../context/useResumeData";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faLocationDot, faPhone } from "@fortawesome/free-solid-svg-icons";
+import {
+  faLocationDot,
+  faPhone,
+  faGlobe,
+  faEnvelope,
+} from "@fortawesome/free-solid-svg-icons";
 import { faGithub, faLinkedin } from "@fortawesome/free-brands-svg-icons";
+import { useTranslation } from "react-i18next";
 
 const Template1 = () => {
   const { resumeData } = useResumeData();
+  const { t } = useTranslation();
+
   return (
     <div className="template1 p-3">
       {/* Personal Info Start */}
@@ -14,50 +22,87 @@ const Template1 = () => {
       <div className="d-flex justify-content-center">
         <h6>{resumeData.personalInfo.jobTitle}</h6>
       </div>
-      <div className="d-flex justify-content-between">
-        <div className="d-flex gap-2">
+      <div className="d-flex justify-content-between gap-2 mt-2">
+        <div className="d-flex gap-2 small-font w-50">
           <FontAwesomeIcon icon={faLocationDot} />
-          <p className="paragraph">{resumeData.personalInfo.location}</p>
+          <p>{resumeData.personalInfo.location}</p>
         </div>
-        <div className="d-flex gap-2">
+        <div className="d-flex gap-2 small-font w-50">
           <FontAwesomeIcon icon={faPhone} />
-          <p className="paragraph">{resumeData.personalInfo.phone}</p>
+          <p>{resumeData.personalInfo.phone}</p>
         </div>
       </div>
-      <div className="d-flex justify-content-between">
-        <div className="d-flex gap-2">
+      <div className="d-flex justify-content-between gap-2">
+        <div className="d-flex gap-2 small-font w-50">
           <FontAwesomeIcon icon={faLinkedin} />{" "}
           <a
-            className="paragraph"
             href={resumeData.personalInfo.linkedin}
             target="_blank"
+            className="cv-link"
           >
             {resumeData.personalInfo.linkedin}
           </a>
         </div>
-        <div className="d-flex gap-2 paragraph">
+        <div className="d-flex gap-2 small-font w-50">
           <FontAwesomeIcon icon={faGithub} />
-          <p className="paragraph">{resumeData.personalInfo.github}</p>
-        </div>
-      </div>
-      <div className="d-flex justify-content-between">
-        <div className="d-flex gap-2">
-          <FontAwesomeIcon icon={faLinkedin} />{" "}
           <a
-            className="paragraph"
-            href={resumeData.personalInfo.linkedin}
+            href={resumeData.personalInfo.github}
             target="_blank"
+            className="cv-link"
           >
-            {resumeData.personalInfo.linkedin}
+            {resumeData.personalInfo.github}
           </a>
         </div>
-        <div className="d-flex gap-2 paragraph">
-          <FontAwesomeIcon icon={faGithub} />
-          <p className="paragraph">{resumeData.personalInfo.github}</p>
+      </div>
+      <div className="d-flex justify-content-between gap-2">
+        <div className="d-flex gap-2 small-font w-50">
+          <FontAwesomeIcon icon={faGlobe} />{" "}
+          <a
+            href={resumeData.personalInfo.personalWebsite}
+            target="_blank"
+            className="cv-link"
+          >
+            {resumeData.personalInfo.personalWebsite}
+          </a>
+        </div>
+        <div className="d-flex gap-2 small-font w-50">
+          <FontAwesomeIcon icon={faEnvelope} />
+          <a
+            href={`mailto:${resumeData.personalInfo.email}`}
+            target="_blank"
+            className="cv-link"
+          >
+            {resumeData.personalInfo.email}
+          </a>
         </div>
       </div>
       {/* Personal Info End */}
+
+      {/* Summary Start */}
+      <div className="d-flex justify-content-center mt-3">
+        <h6>{t("summary.title")}</h6>
+      </div>
       <hr />
+      <div className="paragraph mt-2">{resumeData.summary}</div>
+      {/* Summary End */}
+
+      {/* Education Start */}
+      <div className="d-flex justify-content-center mt-3">
+        <h6>{t("education.title")}</h6>
+      </div>
+      <hr />
+      {resumeData.education.map((education) => (
+        <>
+          <div className="d-flex justify-content-between mt-2">
+            <strong className="small-font">{education.school}</strong>
+            <strong className="small-font">{education.year}</strong>
+          </div>
+          <div>
+            <p className="small-font">{education.degree}</p>
+          </div>
+        </>
+      ))}
+      {/* Education End */}
     </div>
   );
 };

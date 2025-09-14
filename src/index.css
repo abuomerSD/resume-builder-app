@@ -13,6 +13,41 @@
   --background-color: #0f172a;
 }
 
+/* global rules */
+
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+p {
+  margin: 0;
+  padding: 0;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0;
+  padding: 0;
+}
+
+hr {
+  margin: 0;
+  padding: 0;
+}
+
+/* Toast */
+.toast-container {
+  position: fixed;
+  top: 10px;
+  right: 5px;
+}
+
 /* Navbar */
 .nbar {
   background-color: var(--background-color);
@@ -100,7 +135,26 @@
   width: 100%;
 }
 
+.small-font {
+  font-size: 12px;
+}
+
 .paragraph {
   font-size: 12px;
+  white-space: pre-wrap;
+}
+
+.cv-link {
+  width: 200px;
   overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.list-element {
+  background-color: var(--background-color);
+}
+
+.cursor-pointer {
+  cursor: pointer;
 }
