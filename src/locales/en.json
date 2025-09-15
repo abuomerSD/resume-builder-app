@@ -23,7 +23,8 @@
     "location": "Location",
     "jobTitle": "Job Title",
     "fromDate": "From",
-    "toDate": "To"
+    "toDate": "To",
+    "description": "Description"
   },
   "skills": {
     "title": "Skills",

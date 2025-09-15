@@ -70,6 +70,7 @@ hr {
   border: 1px solid gray;
   border-radius: 10px;
   height: calc(100vh - 58px);
+  overflow: auto;
   /* width: auto; */
 }
 
@@ -80,9 +81,9 @@ hr {
   height: calc(100vh - 58px);
   display: flex;
   flex-direction: column;
-  /* justify-content: center; */
   align-items: center;
   padding: 20px;
+  overflow: auto;
 }
 
 /* Summary */
@@ -133,6 +134,7 @@ hr {
   border: 1px solid gray;
   height: 100%;
   width: 100%;
+  overflow: auto;
 }
 
 .small-font {
@@ -157,4 +159,26 @@ hr {
 
 .cursor-pointer {
   cursor: pointer;
+}
+
+.certification-link {
+  width: 450px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+@media (max-width: 400px) {
+  .certification-link {
+    width: 250px;
+  }
+}
+
+.description {
+  resize: none;
+  background-color: var(--background-color);
+}
+
+.white-space-prewrap {
+  white-space: pre-wrap;
 }

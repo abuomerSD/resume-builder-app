@@ -23,7 +23,8 @@
     "location": "الموقع الجغرافي",
     "jobTitle": "اسم الوظيفة",
     "fromDate": "من",
-    "toDate": "الى"
+    "toDate": "الى",
+    "description": "الوصف"
   },
   "skills": {
     "title": "المهارات",

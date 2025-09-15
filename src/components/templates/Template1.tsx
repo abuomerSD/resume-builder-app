@@ -8,6 +8,7 @@ import {
 } from "@fortawesome/free-solid-svg-icons";
 import { faGithub, faLinkedin } from "@fortawesome/free-brands-svg-icons";
 import { useTranslation } from "react-i18next";
+import dayjs from "dayjs";
 
 const Template1 = () => {
   const { resumeData } = useResumeData();
@@ -103,6 +104,52 @@ const Template1 = () => {
         </>
       ))}
       {/* Education End */}
+
+      {/* Certifications Start */}
+      <div className="d-flex justify-content-center mt-3">
+        <h6>{t("certifications.title")}</h6>
+      </div>
+      <hr />
+      {resumeData.certifications.map((certification) => (
+        <>
+          <div className="d-flex justify-content-between mt-2">
+            <strong className="small-font">{certification.school}</strong>
+            <strong className="small-font">{certification.year}</strong>
+          </div>
+          <div className="certification-link">
+            <a className="small-font" href={certification.link} target="_blank">
+              {certification.link}
+            </a>
+          </div>
+        </>
+      ))}
+      {/* Certifications End */}
+
+      {/* Experience Start */}
+      <div className="d-flex justify-content-center mt-3">
+        <h6>{t("experience.title")}</h6>
+      </div>
+      <hr />
+      {resumeData.experience.map((exp) => (
+        <>
+          <div className="d-flex justify-content-between mt-2">
+            <strong className="small-font">{exp.companyName}</strong>
+            <strong className="small-font">{exp.location}</strong>
+          </div>
+          <div className="small-font d-flex justify-content-between">
+            <p>{exp.jobTitle}</p>
+            <p>{`${
+              exp.fromDate ? dayjs(exp.fromDate).format("DD/MM/YYYY") : ""
+            } - ${
+              exp.toDate ? dayjs(exp.toDate).format("DD/MM/YYYY") : ""
+            }`}</p>
+          </div>
+          <div className="mt-1">
+            <p className="small-font white-space-prewrap">{exp.description}</p>
+          </div>
+        </>
+      ))}
+      {/* Experience End */}
     </div>
   );
 };

@@ -1,7 +1,10 @@
+import type dayjs from "dayjs";
+
 export interface Experience {
   companyName: string;
   location: string;
   jobTitle: string;
-  fromDate: Date;
-  toDate: Date;
+  description: string;
+  fromDate: dayjs.Dayjs;
+  toDate: dayjs.Dayjs;
 }
