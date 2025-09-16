@@ -106,7 +106,7 @@ const Certifications = () => {
                     {certification.link}
                   </a>
                 </div>
-                <div>
+                <div className="d-flex flex-column justify-content-center">
                   <FontAwesomeIcon
                     icon={faTrash}
                     className="text-danger cursor-pointer"

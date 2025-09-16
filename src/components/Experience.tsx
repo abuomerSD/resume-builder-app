@@ -8,7 +8,7 @@ import { Link } from "react-router-dom";
 import { useResumeData } from "../context/useResumeData";
 import ErrorToast from "./toasts/ErrorToast";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faPenToSquare, faTrash } from "@fortawesome/free-solid-svg-icons";
+import { faTrash } from "@fortawesome/free-solid-svg-icons";
 import type { Experience } from "../types/Experience";
 
 const Experience = () => {
@@ -147,10 +147,10 @@ const Experience = () => {
                 </div>
                 <div className="d-flex flex-column justify-content-center">
                   <div className="d-flex">
-                    <FontAwesomeIcon
+                    {/* <FontAwesomeIcon
                       icon={faPenToSquare}
                       className="text-primary cursor-pointer"
-                    />
+                    /> */}
                     <FontAwesomeIcon
                       icon={faTrash}
                       className="text-danger cursor-pointer"

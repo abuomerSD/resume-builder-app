@@ -42,6 +42,12 @@ const Experience = () => {
     updateResumeData("education", educationList);
   }
 
+  // function handleEditEducation(education: Education) {
+  //   setDegree(education.degree);
+  //   setSchool(education.school);
+  //   setYear(education.year);
+  // }
+
   return (
     <div className="d-flex flex-column align-items-center p-3">
       <ErrorToast
@@ -102,14 +108,21 @@ const Experience = () => {
                   <p>{education.degree}</p>
                   <p>{education.year}</p>
                 </div>
-                <div>
-                  <FontAwesomeIcon
-                    icon={faTrash}
-                    className="text-danger cursor-pointer"
-                    onClick={() => {
-                      handleDeleteEducation(education);
-                    }}
-                  />
+                <div className="d-flex flex-column justify-content-center">
+                  <div>
+                    {/* <FontAwesomeIcon
+                      icon={faPenToSquare}
+                      className="text-primary cursor-pointer"
+                      onClick={() => handleEditEducation(education)}
+                    /> */}
+                    <FontAwesomeIcon
+                      icon={faTrash}
+                      className="text-danger cursor-pointer"
+                      onClick={() => {
+                        handleDeleteEducation(education);
+                      }}
+                    />
+                  </div>
                 </div>
               </div>
             </ListGroup.Item>

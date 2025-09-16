@@ -37,7 +37,8 @@
     "projectName": "Project Name",
     "description": "Project Description",
     "add": "Add",
-    "projectLink": "Project Link"
+    "projectLink": "Project Link",
+    "link": "Link"
   },
   "languages": {
     "title": "Languauges",

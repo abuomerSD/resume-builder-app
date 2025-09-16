@@ -150,6 +150,57 @@ const Template1 = () => {
         </>
       ))}
       {/* Experience End */}
+
+      {/* Skills Start */}
+      <div className="d-flex justify-content-center mt-3">
+        <h6>{t("skills.title")}</h6>
+      </div>
+      <hr />
+      {resumeData.skills.map((skill) => (
+        <>
+          <div className="d-flex small-font">
+            <strong>{skill.category}:</strong>
+            <p className="ms-1">{skill.description}</p>
+          </div>
+        </>
+      ))}
+      {/* Skills End */}
+
+      {/* Projects Start */}
+      <div className="d-flex justify-content-center mt-3">
+        <h6>{t("projects.title")}</h6>
+      </div>
+      <hr />
+      {resumeData.projects.map((project) => (
+        <>
+          <div className="small-font">
+            <strong>{project.name}</strong>
+            <p className="white-space-prewrap">{project.description}</p>
+            <div className="d-flex">
+              <p className="me-1">{t("projects.link")}:</p>
+              <a href={project.link} target="_blank">
+                {project.link}
+              </a>
+            </div>
+          </div>
+        </>
+      ))}
+      {/* Projects End */}
+
+      {/* Languages Start */}
+      <div className="d-flex justify-content-center mt-3">
+        <h6>{t("languages.title")}</h6>
+      </div>
+      <hr />
+      {resumeData.languages.map((language) => (
+        <>
+          <div className="small-font d-flex">
+            <strong>{language.name}:</strong>
+            <p className="ms-1">{language.level}</p>
+          </div>
+        </>
+      ))}
+      {/* Languages End */}
     </div>
   );
 };

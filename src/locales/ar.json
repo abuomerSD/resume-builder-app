@@ -37,7 +37,8 @@
     "projectName": "اسم المشروع",
     "description": "وصف المشروع",
     "add": "إضافة",
-    "projectLink": "رابط المشروع"
+    "projectLink": "رابط المشروع",
+    "link": "رابط"
   },
   "languages": {
     "title": "اللغات",
