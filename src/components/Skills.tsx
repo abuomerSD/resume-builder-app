@@ -55,6 +55,7 @@ const Skills = () => {
         rows={5}
         value={description}
         onChange={(e) => setDescription(e.target.value)}
+        style={{ resize: "none" }}
       ></textarea>
       <button className="btn btn-second" onClick={handleAddSkill}>
         {t("skills.add")}

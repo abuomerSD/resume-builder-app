@@ -12,6 +12,10 @@ import NotFoundPage from "../pages/NotFound";
 
 const routes: RouteObject[] = [
   {
+    index: true,
+    element: <PersonalInfo />,
+  },
+  {
     path: "/personal-info",
     element: <PersonalInfo />,
   },

@@ -64,5 +64,12 @@
   "error": {
     "title": "Error",
     "fillAllFields": "Please Fill All Fields"
+  },
+  "modals": {
+    "close": "close",
+    "confirmation": "Confirmation",
+    "deleteAllResumeData": "Do You Want To Delete All Resume Data",
+    "delete": "Delete",
+    "download": "download"
   }
 }

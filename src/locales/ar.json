@@ -64,5 +64,12 @@
   "error": {
     "title": "خطأ",
     "fillAllFields": "من فضلك املأ جميع الحقول"
+  },
+  "modals": {
+    "close": "اغلاق",
+    "confirmation": "تأكيد",
+    "deleteAllResumeData": "هل تريد حذف جميع بيانات السيرة الذاتية",
+    "delete": "حذف",
+    "download": "تحميل"
   }
 }

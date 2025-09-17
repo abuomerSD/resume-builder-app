@@ -64,6 +64,7 @@ const Projects = () => {
         rows={5}
         value={description}
         onChange={(e) => setDescription(e.target.value)}
+        style={{ resize: "none" }}
       ></textarea>
       <button className="btn btn-second" onClick={handleAddProject}>
         {t("projects.add")}
