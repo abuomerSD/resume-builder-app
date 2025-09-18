@@ -75,5 +75,8 @@
   },
   "template": {
     "download": "تحميل"
+  },
+  "general": {
+    "developing": "تحت التطوير..."
   }
 }
