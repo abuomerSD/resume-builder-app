@@ -1,7 +1,7 @@
 import { TextField } from "@mui/material";
 import { DatePicker } from "@mui/x-date-pickers";
 import dayjs, { Dayjs } from "dayjs";
-import { useState } from "react";
+import React, { useState } from "react";
 import { Col, ListGroup, Row } from "react-bootstrap";
 import { useTranslation } from "react-i18next";
 import { Link } from "react-router-dom";
@@ -9,9 +9,9 @@ import { useResumeData } from "../context/useResumeData";
 import ErrorToast from "./toasts/ErrorToast";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faTrash } from "@fortawesome/free-solid-svg-icons";
-import type { Experience } from "../types/Experience";
+import type { Experience as ExperienceType } from "../types/Experience";
 
-const Experience = () => {
+const Experience: React.FC = () => {
   const { t } = useTranslation();
   const { resumeData, updateResumeData } = useResumeData();
   const [companyName, setCompanyName] = useState("");
@@ -41,7 +41,7 @@ const Experience = () => {
     }
   }
 
-  function handleDeleteExperience(experience: Experience) {
+  function handleDeleteExperience(experience: ExperienceType) {
     const experiences = resumeData.experience.filter(
       (exp) => exp !== experience
     );
