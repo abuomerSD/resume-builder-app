@@ -15,7 +15,8 @@
     "school": "المؤسسة التعليمية",
     "year": "السنة",
     "link": "رابط",
-    "add": "إضافة"
+    "add": "إضافة",
+    "certificationLink": "رابط الشهادة"
   },
   "experience": {
     "title": "الخبرات العملية",
@@ -70,6 +71,9 @@
     "confirmation": "تأكيد",
     "deleteAllResumeData": "هل تريد حذف جميع بيانات السيرة الذاتية",
     "delete": "حذف",
+    "download": "تحميل"
+  },
+  "template": {
     "download": "تحميل"
   }
 }

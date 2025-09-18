@@ -41,7 +41,7 @@ const Template1 = () => {
             target="_blank"
             className="cv-link"
           >
-            {resumeData.personalInfo.linkedin}
+            {t("info.linkedin")}
           </a>
         </div>
         <div className="d-flex gap-2 small-font w-50">
@@ -51,7 +51,7 @@ const Template1 = () => {
             target="_blank"
             className="cv-link"
           >
-            {resumeData.personalInfo.github}
+            {t("info.github")}
           </a>
         </div>
       </div>
@@ -63,7 +63,7 @@ const Template1 = () => {
             target="_blank"
             className="cv-link"
           >
-            {resumeData.personalInfo.personalWebsite}
+            {t("info.personalWebsite")}
           </a>
         </div>
         <div className="d-flex gap-2 small-font w-50">
@@ -73,7 +73,7 @@ const Template1 = () => {
             target="_blank"
             className="cv-link"
           >
-            {resumeData.personalInfo.email}
+            {t("info.email")}
           </a>
         </div>
       </div>
@@ -117,8 +117,9 @@ const Template1 = () => {
             <strong className="small-font">{certification.year}</strong>
           </div>
           <div className="certification-link">
+            {`${t("certifications.link")}: `}
             <a className="small-font" href={certification.link} target="_blank">
-              {certification.link}
+              {t("certifications.certificationLink")}
             </a>
           </div>
         </>
@@ -179,7 +180,7 @@ const Template1 = () => {
             <div className="d-flex">
               <p className="me-1">{t("projects.link")}:</p>
               <a href={project.link} target="_blank">
-                {project.link}
+                {t("projects.projectLink")}
               </a>
             </div>
           </div>

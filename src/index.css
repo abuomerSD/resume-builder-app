@@ -4,6 +4,7 @@
   --primary-color: #2563eb;
   --secondary-color: #1e293b;
   --background-color: #f8fafc;
+  --small-font-size: 16px;
 }
 
 /* dark mode */
@@ -138,11 +139,11 @@ hr {
 }
 
 .small-font {
-  font-size: 12px;
+  font-size: var(--small-font-size);
 }
 
 .paragraph {
-  font-size: 12px;
+  font-size: var(--small-font-size);
   white-space: pre-wrap;
 }
 

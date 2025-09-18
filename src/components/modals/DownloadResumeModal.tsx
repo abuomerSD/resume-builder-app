@@ -2,10 +2,9 @@ import type { JSX } from "react";
 import { Button, Modal } from "react-bootstrap";
 import { useTranslation } from "react-i18next";
 import { useState, useRef } from "react";
-import { jsPDF } from "jspdf";
-import html2canvas from "html2canvas";
-import { Document, Packer, Paragraph, TextRun } from "docx";
-import { saveAs } from "file-saver";
+// import { Document, Packer, Paragraph, TextRun } from "docx";
+// import { saveAs } from "file-saver";
+import html2pdf from "html2pdf.js";
 
 interface DownloadResumeModalProps {
   title: string;
@@ -24,45 +23,28 @@ const DownloadResumeModal = (props: DownloadResumeModalProps) => {
     if (!resumeRef.current) return;
 
     if (format === "pdf") {
-      const element = resumeRef.current;
-      const canvas = await html2canvas(element);
-      const imgData = canvas.toDataURL("image/png");
+      console.log(
+        "resumeRef.current size:",
+        resumeRef.current?.offsetWidth,
+        resumeRef.current?.offsetHeight
+      );
 
-      const pdf = new jsPDF("p", "mm", "a4");
-      const pageWidth = pdf.internal.pageSize.getWidth();
-      //   const pageHeight = pdf.internal.pageSize.getHeight();
-
-      const imgWidth = pageWidth;
-      const imgHeight = (canvas.height * imgWidth) / canvas.width;
-
-      pdf.addImage(imgData, "PNG", 0, 0, imgWidth, imgHeight);
-      pdf.save("resume.pdf");
+      html2pdf()
+        .set({
+          margin: 10,
+          filename: `resume-${Date.now()}.pdf`,
+          html2canvas: { scale: 2, useCORS: true, allowTaint: true },
+          jsPDF: { unit: "mm", format: "a4", orientation: "portrait" },
+        })
+        .from(resumeRef.current)
+        .save();
     } else if (format === "docx") {
-      const textContent = resumeRef.current.innerText;
-
-      const doc = new Document({
-        sections: [
-          {
-            children: [
-              new Paragraph({
-                children: [new TextRun(textContent)],
-              }),
-            ],
-          },
-        ],
-      });
-
-      const blob = await Packer.toBlob(doc);
-      saveAs(blob, "resume.docx");
+      console.log("docx");
     }
   }
 
   return (
     <>
-      <div style={{ display: "none" }} ref={resumeRef}>
-        {props.selectedTemplate}
-      </div>
-
       <div
         className="modal show"
         style={{ display: "block", position: "initial" }}
@@ -74,6 +56,25 @@ const DownloadResumeModal = (props: DownloadResumeModalProps) => {
 
           <Modal.Body>
             <div className="d-flex flex-column justify-content-center align-items-center">
+              {/* cv preview */}
+              <div
+                style={
+                  {
+                    // display: "none",
+                    // position: "absolute",
+                    // top: "-10000px",
+                    // left: 0,
+                    // width: "210mm",
+                    // minHeight: "297mm",
+                    // background: "white",
+                  }
+                }
+                ref={resumeRef}
+              >
+                {props.selectedTemplate}
+              </div>
+
+              {/* select file format */}
               <select
                 className="p-2 m-2"
                 value={format}

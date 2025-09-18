@@ -32,7 +32,7 @@ function ConfirmationModal(props: ConfirmationModalProps) {
           <Button variant="secondary" onClick={props.handleClose}>
             {t("modals.close")}
           </Button>
-          <Button variant="primary" onClick={props.handler}>
+          <Button variant="danger" onClick={props.handler}>
             {props.okButtonText}
           </Button>
         </Modal.Footer>

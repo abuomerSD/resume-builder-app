@@ -15,7 +15,8 @@
     "school": "School",
     "year": "Year",
     "link": "Link",
-    "add": "Add"
+    "add": "Add",
+    "certificationLink": "Certification Link"
   },
   "experience": {
     "title": "Experience",
@@ -70,6 +71,9 @@
     "confirmation": "Confirmation",
     "deleteAllResumeData": "Do You Want To Delete All Resume Data",
     "delete": "Delete",
+    "download": "download"
+  },
+  "template": {
     "download": "download"
   }
 }
