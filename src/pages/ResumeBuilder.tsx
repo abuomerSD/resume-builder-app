@@ -41,7 +41,7 @@ const ResumeBuilder = () => {
 
     html2pdf()
       .set({
-        margin: 10,
+        margin: 20,
         filename: `resume-${Date.now()}.pdf`,
         html2canvas: { scale: 2, useCORS: true, allowTaint: true },
         jsPDF: { unit: "mm", format: "a4", orientation: "portrait" },
