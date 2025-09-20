@@ -2,7 +2,7 @@ import Container from "react-bootstrap/Container";
 import Nav from "react-bootstrap/Nav";
 import Navbar from "react-bootstrap/Navbar";
 import { useTranslation } from "react-i18next";
-import { Link } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 import { FormControlLabel, Switch } from "@mui/material";
 
 function NavBar() {
@@ -24,46 +24,30 @@ function NavBar() {
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
         <Navbar.Collapse id="basic-navbar-nav">
           <Nav className="me-auto">
-            <Nav.Link>
-              <Link to={"/personal-info"} className="link">
-                {t("info.title")}
-              </Link>
-            </Nav.Link>
-            <Nav.Link>
-              <Link to={"/summary"} className="link">
-                {t("summary.title")}
-              </Link>
-            </Nav.Link>
-            <Nav.Link href="#">
-              <Link to={"/education"} className="link">
-                {t("education.title")}
-              </Link>
-            </Nav.Link>
-            <Nav.Link href="#">
-              <Link to={"/certifications"} className="link">
-                {t("certifications.title")}
-              </Link>
-            </Nav.Link>
-            <Nav.Link href="#">
-              <Link to={"/experience"} className="link">
-                {t("experience.title")}
-              </Link>
-            </Nav.Link>
-            <Nav.Link href="#">
-              <Link to={"/skills"} className="link">
-                {t("skills.title")}
-              </Link>
-            </Nav.Link>
-            <Nav.Link href="#">
-              <Link to={"/projects"} className="link">
-                {t("projects.title")}
-              </Link>
-            </Nav.Link>
-            <Nav.Link href="#">
-              <Link to={"/languages"} className="link">
-                {t("languages.title")}
-              </Link>
-            </Nav.Link>
+            <NavLink to={"/personal-info"} className="link navbar-link">
+              {t("info.title")}
+            </NavLink>
+            <NavLink to={"/summary"} className="link navbar-link">
+              {t("summary.title")}
+            </NavLink>
+            <NavLink to={"/education"} className="link navbar-link">
+              {t("education.title")}
+            </NavLink>
+            <NavLink to={"/certifications"} className="link navbar-link">
+              {t("certifications.title")}
+            </NavLink>
+            <NavLink to={"/experience"} className="link navbar-link">
+              {t("experience.title")}
+            </NavLink>
+            <NavLink to={"/skills"} className="link navbar-link">
+              {t("skills.title")}
+            </NavLink>
+            <NavLink to={"/projects"} className="link navbar-link">
+              {t("projects.title")}
+            </NavLink>
+            <NavLink to={"/languages"} className="link navbar-link me-2">
+              {t("languages.title")}
+            </NavLink>{" "}
             <FormControlLabel
               control={
                 <Switch checked={isArabic} onChange={handleChangeLanguage} />

@@ -4,6 +4,7 @@
   --primary-color: #2563eb;
   --secondary-color: #1e293b;
   --background-color: #f8fafc;
+  --navbar-active-link-color: #2563ebb0;
   --small-font-size: 16px;
 }
 
@@ -16,7 +17,7 @@
 
 /* global rules */
 
-body {
+* {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
@@ -52,11 +53,25 @@ hr {
 /* Navbar */
 .nbar {
   background-color: var(--background-color);
+  box-shadow: 0 1px 0 0 rgb(0 0 255 / 20%);
 }
 
 .nbar .link {
   color: var(--secondary-color);
   text-decoration: none;
+  /* margin: 5px; */
+}
+
+.nbar .navbar-link {
+  transition: 0.3s;
+  padding: 5px;
+}
+
+.nbar .navbar-link:hover,
+.nbar .navbar-link.active {
+  color: white;
+  background: var(--navbar-active-link-color);
+  border-radius: 5px;
 }
 
 /* Resume Bulder Page */

@@ -10,6 +10,7 @@ import ConfirmationModal from "../components/modals/ConfirmationModal";
 import { useResumeData } from "../context/useResumeData";
 import DownloadResumeModal from "../components/modals/DownloadResumeModal";
 import html2pdf from "html2pdf.js";
+import { Bounce, toast, ToastContainer } from "react-toastify";
 
 const ResumeBuilder = () => {
   const [selectedTemplate, setSelectedTemplate] = useState<"1" | "2">("1"); // restrict to "1" | "2"
@@ -47,13 +48,28 @@ const ResumeBuilder = () => {
         jsPDF: { unit: "mm", format: "a4", orientation: "portrait" },
       })
       .from(resumeRef.current)
-      .save();
+      .save()
+      .then(() => {
+        toast.success(t("toast.resumeDownloadedSuccessfuly"), {
+          position: "bottom-right",
+          autoClose: 5000,
+          hideProgressBar: false,
+          closeOnClick: false,
+          pauseOnHover: true,
+          draggable: true,
+          progress: undefined,
+          theme: "dark",
+          transition: Bounce,
+        });
+      })
+      .catch((error) => console.log(error));
   }
 
   return (
     <div className="resume-builder">
       <Container>
-        <Row>
+        <ToastContainer />
+        <Row className="mt-3">
           <Col xs={12} lg={6}>
             <div className="resume-data-forms">
               <Outlet />

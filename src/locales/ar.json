@@ -78,5 +78,8 @@
   },
   "general": {
     "developing": "تحت التطوير..."
+  },
+  "toast": {
+    "resumeDownloadedSuccessfuly": "تم تحميل السيرة الذاتية بنجاح"
   }
 }

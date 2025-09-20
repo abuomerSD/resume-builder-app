@@ -131,17 +131,6 @@ const PersonalInfo = () => {
           <TextField
             className="m-1"
             id="outlined-required"
-            label={t("info.email")}
-            value={resumeData.personalInfo.email}
-            onChange={(e: React.ChangeEvent<HTMLInputElement>) => {
-              handleEmailChange(e);
-            }}
-          />
-        </Col>
-        <Col xs={12} md={6}>
-          <TextField
-            className="m-1"
-            id="outlined-required"
             label={t("info.linkedin")}
             value={resumeData.personalInfo.linkedin}
             onChange={(e: React.ChangeEvent<HTMLInputElement>) => {
@@ -149,8 +138,6 @@ const PersonalInfo = () => {
             }}
           />
         </Col>
-      </Row>
-      <Row>
         <Col xs={12} md={6}>
           <TextField
             className="m-1"
@@ -162,6 +149,8 @@ const PersonalInfo = () => {
             }}
           />
         </Col>
+      </Row>
+      <Row>
         <Col xs={12} md={6}>
           <TextField
             className="m-1"
@@ -170,6 +159,17 @@ const PersonalInfo = () => {
             value={resumeData.personalInfo.personalWebsite}
             onChange={(e: React.ChangeEvent<HTMLInputElement>) => {
               handlePersonalWebsiteChange(e);
+            }}
+          />
+        </Col>
+        <Col xs={12} md={6}>
+          <TextField
+            className="m-1"
+            id="outlined-required"
+            label={t("info.email")}
+            value={resumeData.personalInfo.email}
+            onChange={(e: React.ChangeEvent<HTMLInputElement>) => {
+              handleEmailChange(e);
             }}
           />
         </Col>
